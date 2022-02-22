@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Company name</th>
+                    <th scope="col">Company dec</th>
+                    <th scope="col">Starting year</th>
+                    <th scope="col">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of values">
+                    <th >{{c.cname}}</th>
+                    <td>{{c.companyDecription}}</td>
+                    <td>{{c.year}}</td>
+                    <td><button class="btn btn-outline-success" (click)="display(c)">View Details</button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+<app-cdetails [Data]="value" ></app-cdetails>
